@@ -1,8 +1,8 @@
 # Lustre Client packaging tools for Fedora Copr build
 This repository maintains RPM packaging tool that supports building lustre 2.12 client on the Fedora Copr.
 
-- https://copr.fedorainfracloud.org/coprs/orrisroot/lustre-client-el7\_9/
-- https://copr.fedorainfracloud.org/coprs/orrisroot/lustre-client-el8\_5/
+- https://copr.fedorainfracloud.org/coprs/orrisroot/lustre-client-el7_9/
+- https://copr.fedorainfracloud.org/coprs/orrisroot/lustre-client-el8_5/
 
 ## Installation Instructions of Fedora Copr build packages
 Currently, Copr repository is provided for EL7.9 and EL8.5 x86\_64 packages.
