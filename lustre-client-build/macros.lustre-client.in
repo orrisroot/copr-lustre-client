@@ -1,0 +1,2 @@
+%kdir    /usr/src/kernels/@@KERNEL_VERSION@@
+%kobjdir /usr/src/kernels/@@KERNEL_VERSION@@

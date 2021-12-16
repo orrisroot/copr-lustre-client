@@ -1,0 +1,3 @@
+*.rpm
+
+lustre-client-build/lustre-client-build.spec

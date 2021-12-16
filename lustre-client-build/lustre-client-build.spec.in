@@ -1,0 +1,30 @@
+%global  kernel_version @@@KERNEL_VERSION@@@
+
+Name:    lustre-client-build
+Version: @@@OS_VERSION@@@
+Release: 1%{?dist}
+Summary: RPM build macro for lustre client packaging
+
+License: MIT
+Source0: macros.lustre-client.in
+BuildArch: noarch
+
+Requires:  kernel-devel   = %{kernel_version}
+Requires:  kernel-headers = %{kernel_version}
+Requires:  krb5-devel openssl-devel net-snmp-devel
+
+%description
+RPM build macro for lustre client packaging
+
+%prep
+%setup -T -c
+
+%build
+sed -e "s/@@KERNEL_VERSION@@/%{kernel_version}.%{_arch}/g" %{SOURCE0} > macros.lustre-client
+
+%install
+mkdir -p %{buildroot}/%{rpmmacrodir}
+install -m 644 macros.lustre-client %{buildroot}/%{rpmmacrodir}/
+
+%files
+%{rpmmacrodir}/macros.lustre-client
